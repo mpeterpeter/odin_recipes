@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
     <title>Scrambled Tofu Recipe</title>
 </head>
+
 <body>
-    <h1>Scrambled Tofu a la Piet</h1>
+    <h1 style="text-align: center;">Scrambled Tofu a la Piet</h1>
+    <div class="pure-g">
+        <img height="400px" class="pure-u-1 pure-u-md-1-2" src="../images/tofu/Tofu.jpg" alt="Image of Tofu Scramble">
+
+        <div class="pure-u-1 pure-u-md-1-2">
+
+            <div>
+                <label for="servingInput">Number of Servings:</label>
+                <input type="number" id="servingInput" value="2" min="1">
+                <button onclick="scaleRecipe()">Scale Recipe</button>
+            </div>
+
+            <h2>Ingredients:</h2>
+            <ul id="ingredientsList">
+                <li>1 block (14-16 oz) firm or extra-firm tofu</li>
+                <li>2 tablespoons olive oil</li>
+                <li>1 small onion, finely chopped</li>
+                <li>2 cloves garlic, minced</li>
+                <li>1 bell pepper, diced (any color)</li>
+                <li>1 tomato, diced</li>
+                <li>1/2 teaspoon turmeric powder (for color)</li>
+                <li>1/2 teaspoon cumin powder</li>
+                <li>1/2 teaspoon paprika</li>
+                <li>1/4 teaspoon black salt (kala namak), optional (for an eggy flavor)</li>
+                <li>Salt and pepper to taste</li>
+                <li>Fresh herbs (such as chopped cilantro or parsley) for garnish</li>
+
+            </ul>
+
+        </div>
+    </div>
+
 </body>
+
+<script>
+    function scaleRecipe() {
+        const servingInput = document.getElementById('servingInput');
+        const servingNumber = servingInput.value;
+
+        // List of ingredients with initial quantities
+        const ingredients = [
+            "1 block (14-16 oz) firm or extra-firm tofu",
+            "2 tablespoons olive oil",
+            "1 small onion, finely chopped",
+            "2 cloves garlic, minced",
+            "1 bell pepper, diced (any color)",
+            "1 tomato, diced",
+            "1/2 teaspoon turmeric powder (for color)",
+            "1/2 teaspoon cumin powder",
+            "1/2 teaspoon paprika",
+            "1/4 teaspoon black salt (kala namak), optional (for an eggy flavor)",
+            "Salt and pepper to taste",
+            "Fresh herbs (such as chopped cilantro or parsley) for garnish"
+
+        ];
+
+
+        // Multiply each ingredient quantity based on the serving number
+        const scaledIngredients = ingredients.map(ingredient => {
+            const parts = ingredient.split(' ');
+            const quantity = parseFloat(parts[0]) * (servingNumber / 4);
+            return quantity.toFixed(2) + ' ' + parts.slice(1).join(' ');
+        });
+
+        // Update the ingredients list
+        const ingredientsList = document.getElementById('ingredientsList');
+        ingredientsList.innerHTML = ''; // Clear existing list
+
+        scaledIngredients.forEach(scaledIngredient => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = scaledIngredient;
+            ingredientsList.appendChild(listItem);
+        });
+    }
+</script>
+
 </html>

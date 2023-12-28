@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
     <title>Chili sin Carne recipe</title>
 </head>
+
 <body>
-    <h1>Chili sin Carne a la Piet</h1>
+    <h1 style="text-align: center;">Chili sin Carne</h1>
+    <div class="pure-g">
+        <img class="pure-u-1 pure-u-md-1-2"  
+            src="../images/chili/sin_carne.jpg" 
+            alt="Imageof Chili sin Carne">
+
+        <div class="pure-u-1 pure-u-md-1-2" >
+
+            <div>
+                <label for="servingInput">Number of Servings:</label>
+                <input type="number" id="servingInput" value="4" min="1">
+                <button onclick="scaleRecipe()">Scale Recipe</button>
+            </div>
+
+            <h2>Ingredients:</h2>
+            <ul id="ingredientsList">
+                <li>2 tablespoons olive oil</li>
+                <li>1 large onion, chopped</li>
+                <li>3 cloves garlic, minced</li>
+                <li>1 red bell pepper, diced</li>
+                <li>1 cup corn kernels (fresh or frozen)</li>
+                <li>1 can (15 oz) black beans, drained and rinsed</li>
+                <li>1 can (15 oz) kidney beans, drained and rinsed</li>
+                <li>1 can (15 oz) pinto beans, drained and rinsed</li>
+                <li>1 can (28 oz) crushed tomatoes</li>
+                <li>1 can (6 oz) tomato paste</li>
+                <li>1 cup vegetable broth</li>
+                <li>2 tablespoons chili powder</li>
+                <li>1 teaspoon dried oregano</li>
+                <li>1 teaspoon Salt and black pepper to taste</li>
+                <li>Juice of 1 lime</li>
+                <li>Fresh cilantro, chopped (for garnish)</li>
+                <li>1 Avocado slices (for garnish)</li>
+                <li>1 Vegan sour cream (optional, for serving)</li>
+                <li>250 g Cooked rice or tortilla chips (for serving)</li>
+            </ul>
+        </div>
+    </div>
+
 </body>
+
+<script>
+    function scaleRecipe() {
+        const servingInput = document.getElementById('servingInput');
+        const servingNumber = servingInput.value;
+
+        // List of ingredients with initial quantities
+        const ingredients = [
+            "2 tablespoons olive oil",
+            "1 large onion, chopped",
+            "3 cloves garlic, minced",
+            "1 red bell pepper, diced",
+            "1 cup corn kernels (fresh or frozen)",
+            "1 can (15 oz) black beans, drained and rinsed",
+            "1 can (15 oz) kidney beans, drained and rinsed",
+            "1 can (15 oz) pinto beans, drained and rinsed",
+            "1 can (28 oz) crushed tomatoes",
+            "1 can (6 oz) tomato paste",
+            "1 cup vegetable broth",
+            "2 tablespoons chili powder",
+            "1 teaspoon dried oregano",
+            "1 teaspoon Salt and black pepper to taste",
+            "Juice of 1 lime",
+            "Fresh cilantro, chopped (for garnish)",
+            "1 Avocado slices (for garnish)",
+            "1 cup Vegan sour cream (optional, for serving)",
+            "500 g Cooked rice or tortilla chips (for serving)"
+        ];
+
+
+        // Multiply each ingredient quantity based on the serving number
+        const scaledIngredients = ingredients.map(ingredient => {
+            const parts = ingredient.split(' ');
+            const quantity = parseFloat(parts[0]) * (servingNumber / 4);
+            return quantity.toFixed(2) + ' ' + parts.slice(1).join(' ');
+        });
+
+        // Update the ingredients list
+        const ingredientsList = document.getElementById('ingredientsList');
+        ingredientsList.innerHTML = ''; // Clear existing list
+
+        scaledIngredients.forEach(scaledIngredient => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = scaledIngredient;
+            ingredientsList.appendChild(listItem);
+        });
+    }
+</script>
+
 </html>
