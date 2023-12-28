@@ -1,53 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
-        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
-    <title>Scrambled Tofu Recipe</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+            integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+        <title>Scrambled Tofu Recipe</title>
+    </head>
 
-<body>
-    <h1 style="text-align: center;">Scrambled Tofu a la Piet</h1>
-    <div class="pure-g">
-        <img height="400px" class="pure-u-1 pure-u-md-1-2" src="../images/tofu/Tofu.jpg" alt="Image of Tofu Scramble">
+    <body>
+        <h1 style="text-align: center;">Scrambled Tofu a la Piet</h1>
 
-        <div class="pure-u-1 pure-u-md-1-2">
-
-            <div>
-                <label for="servingInput">Number of Servings:</label>
-                <input type="number" id="servingInput" value="2" min="1">
-                <button onclick="scaleRecipe()">Scale Recipe</button>
+        <div class="pure-g">
+            <div style="text-align: center;" class="pure-u-1 pure-u-md-2-5">
+                <p>Elevate your morning routine with the savory goodness of
+                    Vegan Scrambled Tofu—a plant-based twist on the
+                    classic scrambled eggs. Not only is this breakfast option a
+                    flavorful delight, but it also boasts
+                    remarkable nutritional benefits, making it an ideal choice
+                    for athletes striving to optimize their
+                    performance.</p>
+                <p>Fuel your body intelligently with Vegan Scrambled Tofu, and
+                    experience the nutritional benefits that will
+                    propel you towards peak athletic performance. Whether you're
+                    a dedicated athlete or simply in search of
+                    a wholesome and delicious breakfast, this dish promises a
+                    satisfying and nutritious start to your day.
+                </p>
             </div>
+            <div style="text-align: left;" class="pure-u-1 pure-u-md-3-5">
+                <ul>
+                    <li>Sustained Energy Release: The combination of protein and
+                        heart-healthy fats in tofu offers a
+                        sustained release of energy, providing athletes with the
+                        endurance they need to conquer morning
+                        workouts or training sessions.</li>
 
-            <h2>Ingredients:</h2>
-            <ul id="ingredientsList">
-                <li>1 block (14-16 oz) firm or extra-firm tofu</li>
-                <li>2 tablespoons olive oil</li>
-                <li>1 small onion, finely chopped</li>
-                <li>2 cloves garlic, minced</li>
-                <li>1 bell pepper, diced (any color)</li>
-                <li>1 tomato, diced</li>
-                <li>1/2 teaspoon turmeric powder (for color)</li>
-                <li>1/2 teaspoon cumin powder</li>
-                <li>1/2 teaspoon paprika</li>
-                <li>1/4 teaspoon black salt (kala namak), optional (for an eggy flavor)</li>
-                <li>Salt and pepper to taste</li>
-                <li>Fresh herbs (such as chopped cilantro or parsley) for garnish</li>
+                    <li>Muscle Repair and Growth Support: Tofu's protein content
+                        not only aids in the repair of muscles
+                        post-exercise but also supports ongoing muscle growth—a
+                        key consideration for athletes seeking to
+                        maximize their physical potential.</li>
 
-            </ul>
+                    <li>Versatile and Customizable Nutrition: Athletes can
+                        tailor this recipe to their nutritional needs by
+                        adding a variety of vegetables and spices, allowing for
+                        a personalized and nutrient-dense start to
+                        the day.</li>
+                </ul>
 
+            </div>
         </div>
-    </div>
 
-</body>
+        <div class="pure-g">
+            <img height="400px" class="pure-u-1 pure-u-md-1-2"
+                src="../images/tofu/Tofu.jpg" alt="Image of Tofu Scramble">
 
-<script>
+            <div class="pure-u-1 pure-u-md-1-2">
+
+                <div>
+                    <label for="servingInput">Number of Servings:</label>
+                    <input type="number" id="servingInput" value="2" min="1">
+                    <button onclick="scaleRecipe()">Scale Recipe</button>
+                </div>
+
+                <h2>Ingredients:</h2>
+                <ul id="ingredientsList">
+                    <li>1 block (14-16 oz) firm or extra-firm tofu</li>
+                    <li>2 tablespoons olive oil</li>
+                    <li>1 small onion, finely chopped</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1 bell pepper, diced (any color)</li>
+                    <li>1 tomato, diced</li>
+                    <li>1/2 teaspoon turmeric powder (for color)</li>
+                    <li>1/2 teaspoon cumin powder</li>
+                    <li>1/2 teaspoon paprika</li>
+                    <li>1/4 teaspoon black salt (kala namak), optional (for an
+                        eggy flavor)</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>Fresh herbs (such as chopped cilantro or parsley) for
+                        garnish</li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div>
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Prepare the Tofu: Press the tofu to remove excess water. You
+                    can use a tofu press or wrap the tofu block
+                    in
+                    a clean kitchen towel and place something heavy on top for
+                    about 15-20 minutes.</li>
+
+                <li>Sauté Vegetables: Heat olive oil in a skillet over medium
+                    heat. Add chopped onions and sauté until
+                    translucent.
+                    Add minced garlic and cook for an additional minute until
+                    fragrant.
+                    Add diced bell pepper and tomato to the skillet. Cook for
+                    3-5 minutes until the vegetables are tender.
+                </li>
+
+                <li>Scramble Tofu: Crumble the pressed tofu into the skillet
+                    with your hands or a fork, resembling scrambled
+                    eggs.
+                    Stir in turmeric powder, cumin powder, paprika, and black
+                    salt (if using). Mix well to evenly coat the
+                    tofu.
+                </li>
+
+                <li>Cook: Cook the tofu mixture over medium heat for 8-10
+                    minutes, stirring occasionally. This allows the
+                    tofu
+                    to absorb the flavors and achieve a slightly crispy
+                    texture.</li>
+
+                <li>Season: Season with salt and pepper to taste. Adjust the
+                    spices if needed.</li>
+
+                <li>Garnish and Serve: Garnish the scrambled tofu with fresh
+                    herbs, such as chopped cilantro or parsley.
+                    Serve hot on toast, in a breakfast burrito, or alongside
+                    your favorite breakfast sides.</li>
+            </ol>
+        </div>
+
+        <p>Enjoy your Vegan Scrambled Tofu! Feel free to customize the recipe
+            with additional vegetables, spices, or
+            condiments to suit your taste preferences.</p>
+
+    </body>
+
+    <script>
     function scaleRecipe() {
         const servingInput = document.getElementById('servingInput');
         const servingNumber = servingInput.value;
