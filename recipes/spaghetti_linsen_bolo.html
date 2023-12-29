@@ -9,54 +9,141 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="../css/styling.css">
     <title>linsen-bolo-recipe</title>
 </head>
 
 <body>
     <h1 style="text-align: center;">Spaghetti with Lentil-Bolognese</h1>
 
-    <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-4"></div>
-        <div class="pure-u-1 pure-u-md-1-4"></div>
-    </div>
-    
-    <div class="pure-g">
-        <img    class="pure-u-1 pure-u-md-1-2" 
-                src="../images/spaghetti/lentil_bolo.jpg"
-                alt="Image of Spaghetti with Lentil-Bolognese">
-        <div class="pure-u-1 pure-u-md-1-2">
+    <!-- Description and benefits of the recipe -->
+        <div class="pure-g">
+            <div style="text-align: center;" class="pure-u-1 pure-u-md-2-5">
+                <div class="l-box">
+                    <p>Enjoy a hearty, nutritious and protein-packed pasta dish
+                        with this Spaghetti with Lentil Bolognese. This
+                        plant-based twist on a classic Italian favorite packs a
+                        flavorful punch along with remarkable nutritional
+                        benefits. Make this your new go-to meal for a satisfying
+                        dinner that will power you through the rest of your
+                        day.</p>
 
-            <div>
-                <label for="servingInput">Number of Servings:</label>
-                <input type="number" id="servingInput" value="4" min="1">
-                <button onclick="scaleRecipe()">Scale Recipe</button>
+                    <p>Fuel your active lifestyle with the sustained energy
+                        release from protein-rich lentils, diced vegetables and
+                        savory Italian herbs. The tomato base delivers a boost
+                        of antioxidants, while the red wine adds depth of
+                        flavor. Customize it to your taste by adding extra
+                        vegetables or spices.</p>
+                </div>
             </div>
 
-            <h2>Ingredients:</h2>
-            <ul id="ingredientsList">
-                <li>1 cup dried green or brown lentils, rinsed and drained</li>
-                <li>2 tablespoons olive oil</li>
-                <li>1 onion, finely chopped</li>
-                <li>3 cloves garlic, minced</li>
-                <li>1 carrot, diced</li>
-                <li>1 celery stalk, diced</li>
-                <li>1 red bell pepper, diced</li>
-                <li>1 can (28 oz) crushed tomatoes</li>
-                <li>2 tablespoons tomato paste</li>
-                <li>1 teaspoon dried oregano</li>
-                <li>1 teaspoon dried basil</li>
-                <li>1/2 teaspoon dried thyme</li>
-                <li>1/2 teaspoon dried rosemary (crushed)</li>
-                <li>1/2 teaspoon Salt and pepper to taste</li>
-                <li>1/2 cup red wine (optional)</li>
-                <li>1 bay leaf</li>
-                <li>1/4 cup fresh parsley, chopped (for garnish)</li>
-                <li>500 g Cooked pasta of your choice</li>
-            </ul>
+            <div style="text-align: left;" class="pure-u-1 pure-u-md-3-5">
+                <div class="l-box">
+                    <ul>
+                        <li>Protein-Packed: Lentils deliver a powerful protein
+                            punch to help repair muscles after tough
+                            workouts.</li>
+                        <li>Sustained Energy: Complex carbs from the pasta
+                            combined with protein and fiber from the lentils
+                            provide steady, long-lasting energy.</li>
+                        <li>Nutrient-Dense: Packed with protein, fiber,
+                            antioxidants, vitamins and minerals to nourish an
+                            active body.</li>
+                        <li>Plant-Powered: A hearty, satisfying meatless meal
+                            perfect for health-conscious athletes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!-- Image and Ingredients list -->
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-2-5">
+            <div class="l-box" style="display: block; margin: auto;">
+                <img height="400px" class="center" src="../images/spaghetti/lentil_bolo.jpg"
+                    alt="Image of Spaghetti with Lentil-Bolognese">
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-2-5" style="margin: auto;">
+
+            <div class="l-box center">
+                <div>
+                    <label for="servingInput">Number of Servings:</label>
+                    <input type="number" id="servingInput" value="4" min="1">
+                    <button onclick="scaleRecipe()">Scale Recipe</button>
+                </div>
+                <h2>Ingredients:</h2>
+                <ul id="ingredientsList">
+                    <li>1 cup dried green or brown lentils, rinsed and drained</li>
+                    <li>2 tablespoons olive oil</li>
+                    <li>1 onion, finely chopped</li>
+                    <li>3 cloves garlic, minced</li>
+                    <li>1 carrot, diced</li>
+                    <li>1 celery stalk, diced</li>
+                    <li>1 red bell pepper, diced</li>
+                    <li>1 can (28 oz) crushed tomatoes</li>
+                    <li>2 tablespoons tomato paste</li>
+                    <li>1 teaspoon dried oregano</li>
+                    <li>1 teaspoon dried basil</li>
+                    <li>1/2 teaspoon dried thyme</li>
+                    <li>1/2 teaspoon dried rosemary (crushed)</li>
+                    <li>1/2 teaspoon Salt and pepper to taste</li>
+                    <li>1/2 cup red wine (optional)</li>
+                    <li>1 bay leaf</li>
+                    <li>1/4 cup fresh parsley, chopped (for garnish)</li>
+                    <li>500 g Cooked pasta of your choice</li>
+                </ul>
+            </div>
 
 
         </div>
     </div>
+
+    <!-- This div contains the instructions for making scrambled tofu -->
+        <div class="l-box">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>
+                    Prepare the Lentils: Rinse and drain the lentils. In a
+                    medium pot, combine the lentils with 4 cups water. Bring to
+                    a boil, then reduce heat to medium-low. Simmer for 20-25
+                    minutes, until lentils are tender but still hold their
+                    shape. Drain any excess water.
+                </li>
+
+                <li>
+                    Make the Sauce: In a large skillet, heat the olive oil over
+                    medium heat. Add the onion and sauté for 3-4 minutes until
+                    translucent. Add the garlic, carrot, celery and bell pepper.
+                    Cook for 5 more minutes.
+                </li>
+
+                <li>
+                    Add the crushed tomatoes, tomato paste, oregano, basil,
+                    thyme, rosemary, salt, pepper and red wine (if using). Stir
+                    to combine.
+                </li>
+
+                <li>
+                    Add the cooked lentils and bay leaf. Let simmer for 15-20
+                    minutes, until thickened.
+                </li>
+
+                <li>
+                    Remove bay leaf. Stir in chopped parsley.
+                </li>
+
+                <li>
+                    Serve lentil bolognese over cooked pasta. Garnish with more
+                    parsley and grated Parmesan cheese if desired.
+                </li>
+            </ol>
+            <p>Enjoy your Lentil Bolognese! Feel free to customize the recipe
+                with additional vegetables, herbs, or spices to suit your
+                taste.</p>
+
+        </div>
+
 
 
 </body>

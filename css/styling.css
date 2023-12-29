@@ -1,0 +1,10 @@
+.l-box{
+    padding : 1em;
+}
+.center {
+    display: grid;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+  }
